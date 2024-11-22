@@ -17,6 +17,142 @@
 
 body {
   margin: 0;
-  /* font-family: "Young Serif", serif; */
-  /* font-family: "Outfit", serif; */
+  background-color: var(--white);
+  font-family: "Outfit", serif;
+  color: var(--stone-600);
+}
+
+main {
+  background-color: var(--white);
+}
+
+.recipe-photo {
+  height: 200px;
+  background-image: url("./assets/images/image-omelette.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+main h1,
+main p,
+#prep-time,
+#ingredients,
+#instructions,
+#nutritional-facts {
+  margin: 32px;
+}
+
+main > p {
+  color: var(--stone-600);
+}
+
+#prep-time {
+  border-radius: 16px;
+  padding: 32px;
+  background-color: var(--rose-50);
+}
+
+#prep-time h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--rose-800);
+}
+
+#prep-time ul,
+#ingredients ul,
+#instructions ol {
+  margin: 0 16px;
+  padding: 0;
+}
+
+#prep-time ul li,
+#ingredients ul li,
+#instructions ol li {
+  margin: 16px 0;
+}
+
+#ingredients,
+#instructions {
+  border-bottom: 1px solid var(--stone-150);
+  padding-bottom: 16px;
+}
+
+#ingredients ul li::marker,
+#instructions ol li::marker {
+  color: var(--brown-800);
+  font-weight: bold;
+}
+
+#nutritional-facts p {
+  margin: 16px 0;
+}
+
+#nutritional-facts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nutritional-facts ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--stone-150);
+  padding: 16px 0;
+}
+
+#nutritional-facts ul li:last-of-type {
+  border: none;
+}
+
+#nutritional-facts ul li span:nth-last-of-type(1) {
+  font-weight: 700;
+  color: var(--brown-800);
+}
+
+/* HELPERS */
+.title,
+.subtitle {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 36px;
+  color: var(--stone-900);
+}
+
+.subtitle {
+  font-size: 32px;
+  color: var(--brown-800);
+}
+
+@media (min-width: 640px) {
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--stone-100);
+  }
+
+  main {
+    max-width: 800px;
+    margin: 64px 0;
+    border-radius: 24px;
+    padding: 24px;
+  }
+
+  .recipe-photo {
+    height: 320px;
+    border-radius: 16px;
+  }
+
+  #nutritional-facts {
+    margin-bottom: 0;
+  }
 }
